@@ -1,0 +1,114 @@
+<div class="container">
+    <h1 class="mt-5">Ingresa un nuevo asistente</h1>
+    <form #fDetReuniones="ngForm" ngNativeValidate (ngSubmit)="guardarDetReuniones(fDetReuniones) ">
+        <!-- PRIMER ROW -->
+        <!--Añadir el nombre-->
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-6 mt-3">
+
+                <div class="form-group">
+                    <label for="id_integrantes" class="form-label">No. Integrante</label>
+                    <input type="text" class="form-control" id="id_integrantes" name="id_integrantes" placeholder="Ingrese el número de lista" [(ngModel)]="detreuniones.id_integrantes">
+                </div>
+
+                <!--Reunion-->
+                <div class="form-group mt-2">
+                    <label for="id_reunion" class="form-label">No. Reunión</label>
+                    <input type="text" class="form-control" id="id_reunion" name="id_reunion" placeholder="Ingrese el número de la reunión" [(ngModel)]="detreuniones.id_reunion">
+                </div>
+
+                <!-- Movimientos -->
+                <div class="form-group mt-2">
+                    <label for="id_mov" class="form-label">No. Movimiento</label>
+                    <input type="text" class="form-control" id="id_mov" name="id_mov" placeholder="Ingrese el número del movimiento" [(ngModel)]="detreuniones.id_mov">
+                </div>
+
+                <!-- Estatus -->
+                <div class="form-group mt-2">
+                    <label for="id_estatus" class="form-label">Estatus</label>
+                    <input type="text" class="form-control" id="id_estatus" name="id_estatus" [(ngModel)]="detreuniones.id_estatus">
+                </div>
+
+
+            </div>
+
+            <!-- SEGUNDO APARTADO DE ROW -->
+
+
+            <div class="col-sm-12 col-md-6 mt-5">
+
+                <!-- Puntualidad -->
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="puntualidad">Puntualidad</label>
+                    </div>
+                    <select class="custom-select" name="puntualidad" id="puntualidad" [(ngModel)]="detreuniones.puntualidad">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                    </select>
+                </div>
+
+                <!-- Disciplina -->
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="disciplina">Disciplina</label>
+                    </div>
+                    <select class="custom-select" name="disciplina" id="disciplina" [(ngModel)]="detreuniones.disciplina">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                    </select>
+                </div>
+
+                <!-- Uso del Uniforme -->
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="usoUniforme">Uso de Uniforme</label>
+                    </div>
+                    <select class="custom-select" name="usoUniforme" id="usoUniforme" [(ngModel)]="detreuniones.usoUniforme">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                    </select>
+                </div>
+
+                <!-- Aseo Personal -->
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="aseoPersonal">Aseo Personal</label>
+                    </div>
+                    <select class="custom-select" name="aseoPersonal" id="aseoPersonal" [(ngModel)]="detreuniones.aseoPersonal">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                    </select>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!--Boton de enviar datos-->
+        <div class="d-flex justify-content-end mt-2">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+    <br>
+    <hr>
+    <div class="container">
+
+        <h1>Vista Previa</h1>
+        <div class="form-group mt-5">
+            <p>No. de Integrante: {{detreuniones.id_integrantes}}</p>
+            <p>No. de Reunión: {{detreuniones.id_reunion}}</p>
+            <p>No. de Movimiento: {{detreuniones.id_mov}}</p>
+            <p>Estatus: {{detreuniones.id_estatus}}</p>
+            <p>Puntualidad: {{detreuniones.puntualidad}}</p>
+            <p>Disciplina: {{detreuniones.disciplina}}</p>
+            <p>Uso del Uniforme: {{detreuniones.usoUniforme}}</p>
+            <p>Aseo Personal: {{detreuniones.aseoPersonal}}</p>
+        </div>
+
+
+    </div>
+</div>

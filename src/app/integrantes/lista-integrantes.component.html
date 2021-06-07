@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="mt-5">Integrantes</h1>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">No. Integrante</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Perfil</th>
+                    <th scope="col">Unidad</th>
+                    <th scope="col">Estatus</th>
+                    <th scope="col">Más</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let integrantes of integrantesArreglo">
+                <tr>
+                    <th scope="row">{{integrantes.id_integrantes}}</th>
+                    <td>{{integrantes.nombre}}</td>
+                    <td>{{integrantes.perfil}}</td>
+                    <td>{{integrantes.unidad}}</td>
+                    <td>{{integrantes.estatus}}</td>
+                    <td><a class="btn btn-primary" [routerLink]="['/integrantes', integrantes.id_integrantes]">Detalle</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

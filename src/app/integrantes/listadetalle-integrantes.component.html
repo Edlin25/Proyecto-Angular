@@ -1,0 +1,63 @@
+<div class="container">
+
+    <h1 style="margin-top: 50px;"><strong>{{integrante.nombre}}</strong></h1>
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-6 mt-5">
+
+            <div class="form-group mt-3">
+                <label for="id_integrantes" class="form-label" style="font-size: 20px;"><strong>No.Lista:</strong></label>
+                <label for="id_integrantes" class="form-label" style="font-size: 20px; margin-left: 10px;">{{integrante.id_integrantes}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="edad" class="form-label" style="font-size: 20px;"><strong> Edad: </strong></label>
+                <label for="edad" class="form-label" style="font-size: 20px; margin-left: 10px;">{{integrante.edad}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="fechaIns" class="forml-label" style="font-size: 20px;"><strong> Fecha de inscripcion:</strong></label>
+                <label for="fechaIns" class="form-label" style="font-size: 20px; margin-left: 10px;">{{integrante.fechaIns  | date: 'dd/MM/y'}}</label>
+            </div>
+            <div class="form-group mt-3" style="margin: 10px auto">
+
+                <label for="correo" class="form-label" style="font-size: 20px;"><strong> Correo: </strong></label>
+                <label for="correo" class="form-label" style="font-size: 20px; margin-left: 10px;">{{integrante.correo}}</label>
+            </div>
+
+        </div>
+
+        <!-- SEGUNDO APARTADO DE ROW -->
+        <!-- ESTATUS -->
+        <div class="col-sm-12 col-md-6 mt-5">
+
+            <div class="form-group mt-3">
+                <label for="numeroCel" class="form-label" style="font-size: 20px;"><strong> Número Telefónico: </strong></label>
+                <label for="numeroCel" class="form-label" style="font-size: 20px; margin-left: 10px;">{{integrante.numeroCel}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="perfil" class="form-label" style="font-size: 20px;"><strong>Perfil: </strong></label>
+                <label for="perfil" class="form-label" style="font-size: 20px; margin-left: 10px;">{{integrante.perfil}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="unidad" class="form-label" style="font-size: 20px;"><strong>Unidad: </strong></label>
+                <label for="unidad" class="form-label" style="font-size: 20px; margin-left: 10px;">{{integrante.unidad}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="formatoIns" class="form-label" style="font-size: 20px;"><strong>Formato físico: </strong></label>
+                <label for="formatoIns" class="form-label" style="font-size: 20px; margin-left: 10px;">{{integrante.formatoIns}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="estatus" class="form-label" style="font-size: 20px;"><strong>Estatus:</strong></label>
+                <label for="estatus" class="form-label" style="font-size: 20px; margin-left: 10px; color: green;">{{integrante.estatus}}</label>
+            </div>
+
+        </div>
+    </div>
+
+</div>

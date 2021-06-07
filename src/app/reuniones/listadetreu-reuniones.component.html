@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="mt-5">Detalle de Asistencia</h1>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">No. Detalle</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Lugar</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Estatus</th>
+                    <th scope="col">Más</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let detreuniones of detReunionesArreglo">
+                <tr>
+                    <th scope="row">{{detreuniones.id_detReunion}}</th>
+                    <td>{{detreuniones.nombre}}</td>
+                    <td>{{detreuniones.lugar}}</td>
+                    <td>{{detreuniones.fecha | date: 'dd/MM/y'}}</td>
+                    <td>{{detreuniones.estatus}}</td>
+                    <td><a class="btn btn-primary" [routerLink]="['/reuniones/detalleReunion', detreuniones.id_detReunion]">Detalle</a></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

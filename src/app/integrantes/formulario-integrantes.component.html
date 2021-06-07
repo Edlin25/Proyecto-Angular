@@ -1,0 +1,125 @@
+<div class="container">
+    <h1 class="mt-5">Ingresa un integrante nuevo</h1>
+    <form #fIntegrante="ngForm" ngNativeValidate (ngSubmit)="guardarIntegrante(fIntegrante) ">
+        <!-- PRIMER ROW -->
+        <!--Añadir el nombre-->
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-6 mt-3">
+
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese nombre completo" [(ngModel)]="integrante.nombre">
+                </div>
+
+
+                <!--Añadir edad-->
+                <div class="form-group mt-2">
+                    <label for="edad" class="form-label"> Edad</label>
+                    <input type="text" class="form-control" id="edad" name="edad" aria-describedby="edad nuevo" placeholder="Ingrese" [(ngModel)]="integrante.edad">
+                </div>
+
+
+
+                <!--Seleccionar la fechaIns de inscripcion-->
+                <div class="form-group mt-2">
+                    <label for="fechaIns" class="forml-label">Fecha de inscripcion </label>
+                    <input type="date" class="form-control" name="fechaIns" [(ngModel)]="integrante.fechaIns">
+                </div>
+
+                <!-- Correo -->
+                <div class="form-group mt-2">
+                    <label for="correo" class="form-label"> Correo</label>
+                    <input type="text" class="form-control" id="correo" name="edad" aria-describedby="correo" placeholder="Ingrese" [(ngModel)]="integrante.correo">
+                </div>
+
+                <!--Añadir numero de telefono-->
+
+                <div class="form-group mt-2">
+                    <label for="numeroCel" class="form-label">Telefono</label>
+                    <input type="telefono" class="form-control" aria-describedby="telefono" placeholder="Ingrese" name="numeroCel" [(ngModel)]="integrante.numeroCel">
+                </div>
+            </div>
+
+            <!-- SEGUNDO APARTADO DE ROW -->
+            <!-- ESTATUS -->
+            <div class="col-sm-12 col-md-6 mt-5">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="id_estatus">Estatus</label>
+                    </div>
+                    <select class="custom-select" name="id_estatus" id="id_estatus" [(ngModel)]="integrante.id_estatus">
+              <option value="1">Activo</option>
+              <option value="2">Baja </option>
+            </select>
+                </div>
+
+                <!-- UNIDAD -->
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="id_unidad">Unidad</label>
+                    </div>
+                    <select class="custom-select" name="id_unidad" id="id_unidad" [(ngModel)]="integrante.id_unidad">
+              <option value="1">Orión</option>
+              <option value="2">Betelgeuse</option>
+            </select>
+                </div>
+
+                <!--Seleccionar el id_perfil-->
+
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="perfil">Perfil</label>
+                    </div>
+                    <select class="custom-select" name="perfil" id="id_perfil" [(ngModel)]="integrante.id_perfil">
+              <option value="1">Aspirante</option>
+              <option value="2">Actualizado</option>
+            </select>
+                </div>
+
+                <!-- Formato Fisico -->
+                <!--  <label for="formatoIns" class="form-label"> Formato Fisico </label> -->
+
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="formatoIns">Formato Fisico</label>
+                    </div>
+                    <select class="custom-select" name="formatoIns" id="formatoIns" [(ngModel)]="integrante.formatoIns">
+                        <option value="Entregado">Entregado</option>
+                        <option value="Pendiente">Pendiente</option>
+                     </select>
+                </div>
+
+                <!-- Formato Fisico -->
+                <!--  <label for="formatoIns" class="form-label"> Formato Fisico </label> -->
+
+            </div>
+        </div>
+
+        <!--Boton de enviar datos-->
+        <div class="d-flex justify-content-end mt-2">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+    <br>
+    <hr>
+    <div class="container">
+        <div class="container">
+            <h1>Vista Previa</h1>
+
+            <p>Nombre: {{integrante.nombre}}</p>
+            <p>Edad: {{integrante.edad}}</p>
+            <p>Fecha de inscripcion: {{integrante.fechaIns}}</p>
+            <p>Formato Fisico: {{integrante.formatoIns}}</p>
+            <p>Correo: {{integrante.correo}}</p>
+            <p>Telefono: {{integrante.numeroCel}}</p>
+            <p>Estatus: {{integrante.id_estatus}}</p>
+            <p>Unidad: {{integrante.id_unidad}}</p>
+            <p>Perfil: {{integrante.id_perfil}}</p>
+
+
+        </div>
+    </div>
+</div>

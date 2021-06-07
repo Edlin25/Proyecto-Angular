@@ -1,0 +1,58 @@
+<div class="container">
+
+    <h1 style="margin-top: 50px;"><strong>{{movimiento.nombre}}</strong></h1>
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-6 mt-5">
+
+            <div class="form-group mt-3">
+                <label for="id_mov" class="form-label" style="font-size: 20px;"><strong>No. Movimiento:</strong></label>
+                <label for="id_mov" class="form-label" style="font-size: 20px; margin-left: 10px;">{{movimiento.id_mov}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="folio" class="form-label" style="font-size: 20px;"><strong> Folio: </strong></label>
+                <label for="folio" class="form-label" style="font-size: 20px; margin-left: 10px;">{{movimiento.folio}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="fecha" class="forml-label" style="font-size: 20px;"><strong>Fecha:</strong></label>
+                <label for="fecha" class="form-label" style="font-size: 20px; margin-left: 10px;">{{movimiento.fecha | date: 'dd/MM/y'}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="cantidad" class="form-label" style="font-size: 20px;"><strong>Cantidad: </strong></label>
+                <label for="cantidad" class="form-label" style="font-size: 20px; margin-left: 10px; color: #07689f;">{{movimiento.cantidad | currency: '$'}}</label>
+            </div>
+
+        </div>
+
+        <!-- SEGUNDO APARTADO DE ROW -->
+        <!-- ESTATUS -->
+        <div class="col-sm-12 col-md-6 mt-5">
+
+            <div class="form-group mt-3">
+                <label for="concepto" class="form-label" style="font-size: 20px;"><strong>Concepto: </strong></label>
+                <label for="concepto" class="form-label" style="font-size: 20px; margin-left: 10px;">{{movimiento.concepto}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="tipo" class="form-label" style="font-size: 20px;"><strong>Tipo: </strong></label>
+                <label for="tipo" class="form-label" style="font-size: 20px; margin-left: 10px;">{{movimiento.tipo}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="descripcion" class="form-label" style="font-size: 20px;"><strong>Descripción: </strong></label>
+                <label for="descripcion" class="form-label" style="font-size: 20px; margin-left: 10px;">{{movimiento.descripcion}}</label>
+            </div>
+
+            <div class="form-group mt-3" style="margin: 10px auto">
+                <label for="estatus" class="form-label" style="font-size: 20px;"><strong>Estatus:</strong></label>
+                <label for="estatus" class="form-label" style="font-size: 20px; margin-left: 10px; color: green;">{{movimiento.estatus}}</label>
+            </div>
+
+        </div>
+    </div>
+
+</div>

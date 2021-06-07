@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="mt-5">Movimientos</h1>
+    <div class="table-responsive">
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col">No. Movimiento</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">Tipo </th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Más</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let movimientos of movimientosArreglo">
+                <tr>
+                    <th scope="row">{{movimientos.id_mov}}</th>
+                    <td>{{movimientos.nombre}}</td>
+                    <td>{{movimientos.tipo}}</td>
+                    <td>{{movimientos.fecha | date: 'dd/MM/y'}}</td>
+                    <td>{{movimientos.cantidad | currency: '$'}}</td>
+                    <td><a class="btn btn-primary" [routerLink]="['/movimientos', movimientos.id_mov]">Detalle</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<div class="container">
+    <h1 class="mt-5">Ingresa un movimiento</h1>
+    <form #fMovimiento="ngForm" ngNativeValidate (ngSubmit)="guardarMovimiento(fMovimiento) ">
+        <!-- PRIMER ROW -->
+        <!--Añadir el nombre-->
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-6 mt-3">
+
+                <div class="form-group">
+                    <label for="folio" class="form-label">Folio</label>
+                    <input type="text" class="form-control" id="folio" name="folio" placeholder="Ingrese el folio" [(ngModel)]="movimiento.folio">
+                </div>
+
+                <!-- Integrante -->
+                <div class="form-group">
+                    <label for="folio" class="form-label">No. Integrante</label>
+                    <input type="text" class="form-control" id="folio" name="folio" placeholder="Ingrese el número del integrante" [(ngModel)]="movimiento.id_integrantes">
+                </div>
+
+                <!-- Fecha -->
+                <div class="form-group mt-2">
+                    <label for="fecha" class="forml-label"> Fecha </label>
+                    <input type="date" class="form-control" name="fecha" [(ngModel)]="movimiento.fecha">
+                </div>
+
+                <!-- Cantidad -->
+                <div class="form-group mt-2">
+                    <label for="cantidad" class="form-label"> Cantidad </label>
+                    <input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad" [(ngModel)]="movimiento.cantidad">
+                </div>
+
+
+            </div>
+
+            <!-- SEGUNDO APARTADO DE ROW -->
+            <!-- Tipo de Movimiento -->
+            <div class="col-sm-12 col-md-6 mt-2">
+
+                <!-- Concepto -->
+                <div class="form-group mt-2">
+                    <label for="concepto" class="form-label">Concepto</label>
+                    <input type="text" class="form-control" placeholder="Ingrese el concepto" name="concepto" [(ngModel)]="movimiento.concepto">
+                </div>
+
+                <div class="input-group mt-4">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="id_tipomov">Tipo de Movimiento</label>
+                    </div>
+                    <select class="custom-select" name="id_tipomov" id="id_tipomov" [(ngModel)]="movimiento.id_tipomov">
+                    <option value="1">Entrada</option>
+                    <option value="2">Salida</option>
+                    </select>
+                </div>
+
+                <!-- Estatus -->
+                <div class="col-md-2 mt-3">
+                    <label for="id_estatus" class="form-label"> Estatus </label>
+                    <input type="text" class="form-control col-md-2" id="id_estatus" name="id_estatus" [(ngModel)]="movimiento.id_estatus">
+                </div>
+
+            </div>
+        </div>
+
+        <!--Boton de enviar datos-->
+        <div class="d-flex justify-content-end mt-2">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+    <br>
+    <hr>
+    <div class="container">
+        <div class="container">
+            <h1>Vista Previa</h1>
+
+            <p>Folio: {{movimiento.folio}}</p>
+            <p>Fecha: {{movimiento.fecha}}</p>
+            <p>Cantidad: {{movimiento.cantidad | currency: '$'}}</p>
+            <p>Concepto: {{movimiento.concepto}}</p>
+            <p>Tipo de Movimiento: {{movimiento.id_tipomov}}</p>
+            <p>Estatus: {{movimiento.id_estatus}}</p>
+
+
+
+        </div>
+    </div>
+</div>

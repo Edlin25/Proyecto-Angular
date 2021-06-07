@@ -1,0 +1,48 @@
+<div class="container">
+    <h1 class="mt-5">Ingrese una reunión</h1>
+    <form #fReunion="ngForm" ngNativeValidate (ngSubmit)="guardarReunion(fReunion) ">
+        <!-- PRIMER ROW -->
+
+        <div class="row g-3">
+
+            <!-- Lugar -->
+            <div class="col-md-3">
+                <label for="lugar" class="form-label">Lugar</label>
+                <input type="text" class="form-control" id="lugar" name="lugar" aria-describedby="lugar" placeholder="Ingrese el lugar" [(ngModel)]="reunion.lugar">
+            </div>
+
+            <!--Añadir fecha-->
+            <div class="col-md-3 mt-4">
+                <label for="fecha" class="forml-label">Fecha de reunión </label>
+                <input type="date" class="form-control" name="fecha" [(ngModel)]="reunion.fecha">
+            </div>
+
+            <!-- Estatus -->
+            <div class="col-md-3">
+                <label for="lugar" class="form-label">Estatus</label>
+                <input type="text" class="form-control" id="id_estatus" name="id_estatus" aria-describedby="id_estatus" [(ngModel)]="reunion.id_estatus">
+            </div>
+
+        </div>
+
+
+        <!--Boton de enviar datos-->
+        <div class="d-flex justify-content-end mt-2">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+    <br>
+    <hr>
+    <div class="container">
+        <div class="container">
+            <h1>Vista Previa</h1>
+
+            <p>Lugar: {{reunion.lugar}}</p>
+            <p>Fecha: {{reunion.fecha}}</p>
+            <p>Estatus: {{reunion.id_estatus}}</p>
+
+
+        </div>
+    </div>
+</div>
